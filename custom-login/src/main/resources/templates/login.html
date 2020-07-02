@@ -38,19 +38,26 @@ config.redirectUri = /*[[${redirectUri}]]*/ '{redirectUri}';
 config.logo = 'https://spring.io/img/homepage/icon-spring-cloud.svg';
 config.authParams = {
   issuer: /*[[${issuerUri}]]*/ '{issuerUri}',
-  responseType: 'code',
+  responseType: 'id_token',
+  responseMode: 'okta_post_message',
   state: /*[[${state}]]*/ '{state}' || false,
   nonce: /*[[${nonce}]]*/ '{nonce}',
-  scopes: /*[[${scopes}]]*/ '[scopes]',
-  display: 'page'
+  scopes: ['openid','email', 'profile', 'address', 'phone'],
+  display: 'page',
+  authorizeUrl: /*[[${oktaBaseUrl}]]*/ 'https://{yourOktaDomain}/oauth2/v1/authorize'
 };
-
+config.idps = [{type: 'FACEBOOK', id: '0oailyp48XD6KGc9C4x6'}];
+config.idpDisplay ="PRIMARY";
 new OktaSignIn(config).renderEl(
   { el: '#sign-in-widget' },
-  function (res) {}
+  function (res) {
+	  console.log(res)
+  },
+  function (err) {
+	  console.log(err)
+  }
 );
 /*]]>*/
 </script>
-
 </body>
 </html>

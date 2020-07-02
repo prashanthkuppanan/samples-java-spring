@@ -13,3 +13,10 @@ okta:
     - profile
     - email
     - openid
+    client-id: 0oaia1abo5bwz6Bw94x6
+    client-secret: zCGqRpZtKx5MQ6uNaJqm2KWH8Wf59wp_pBogLlfD
+    issuer: https://dev-310801.okta.com/oauth2/default
+    post-logout-redirect-uri: http://localhost:8080/
+    
+    
+    
