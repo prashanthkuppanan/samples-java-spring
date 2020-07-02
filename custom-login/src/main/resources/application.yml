@@ -17,6 +17,6 @@ okta:
     - openid
     - email
     - profile
-    client-id: 0oaim3svp0qe94E094x6
-    client-secret: CB4XB96VW1fe_47JZVLDkNoImymXhVZucQgooITV
-    issuer: https://dev-310801.okta.com/oauth2/default
+    client-id: 'your_client_id'
+    client-secret: 'your_client_sceret'
+    issuer: https://******.okta.com/oauth2/default
