@@ -8,4 +8,4 @@ spring:
      
 okta:
   oauth2:
-    issuer: https://dev-310801.okta.com/oauth2/default     
+    issuer: https://******.okta.com/oauth2/default     
